@@ -1,0 +1,98 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch FrontEnd (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/frontEnd/bin/Debug/netcoreapp3.1/frontEnd.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/frontEnd",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5000"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Launch ServiceA (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildServiceA",
+            "program": "${workspaceFolder}/serviceA/bin/Debug/netcoreapp3.1/serviceA.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/serviceA",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5001"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Launch ServiceB (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildServiceB",
+            "program": "${workspaceFolder}/serviceB/bin/Debug/netcoreapp3.1/serviceB.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/serviceB",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5002"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Launch ServiceC (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildServiceC",
+            "program": "${workspaceFolder}/serviceC/bin/Debug/netcoreapp3.1/serviceC.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/serviceC",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5002"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
