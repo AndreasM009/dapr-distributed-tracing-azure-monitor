@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicea
+  labels:
+    app: servicea
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: servicea
+  template:
+    metadata:
+      labels:
+        app: servicea
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/id: "serviceaapp"
+        dapr.io/port: "5000"
+        dapr.io/log-level: "debug"
+        dapr.io/config: "tracing"
+    spec:
+      containers:
+      - name: servicea
+        image: m009/servicea:0.1
+        resources:
+          limits:
+            memory: 128Mi
+            cpu: 0.2
+          requests:
+            memory: 64Mi
+            cpu: 0.1
+        env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Development
+          - name: ASPNETCORE_URLS
+            value: "http://+:5000"
+        ports:
+        - containerPort: 5000
+        imagePullPolicy: Always
+
