@@ -8,7 +8,7 @@ To demo a microservice architecture, the sample exists of four services.
 - Backend services
   To demo a distributed microservice architecture the FrontEnd service just calls an instance of either ServiceA, ServiceB or ServiceC. All services just returns a string containing the name of the service instance.
 
-  // Todo: Architecture.
+  ![Architecture](/images/architecture.png)
 
 ## Tracing in dapr
 
